@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Secret</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pin-container">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+
+        <h1>Our Little Secret ♡</h1>
+
+        <p class="message">
+            Before you enter, there's something
+            you need to remember...
+        </p>
+
+        <form id="pin-form">
+            <label for="pin">Enter our secret code</label>
+
+            <input
+                type="password"
+                id="pin"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="6"
+                placeholder="••••"
+                required
+            >
+
+            <button type="submit">Unlock my heart ♡</button>
+
+            <p id="feedback" aria-live="polite"></p>
+        </form>
+
+    </main>
+
+    <script>
+    const pinForm = document.getElementById("pin-form");
+    const pinInput = document.getElementById("pin");
+    const feedback = document.getElementById("feedback");
+
+    pinForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const enteredPIN = pinInput.value;
+
+        if (enteredPIN === "2026") {
+            window.location.href = "home.html";
+        } else {
+            feedback.textContent = "Not quite, my dear. Try again. 💌";
+            pinInput.value = "";
+            pinInput.focus();
+        }
+    });
+    </script>
+
+</body>
+</html>
