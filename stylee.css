@@ -1,0 +1,258 @@
+/* =================================
+   OUR LITTLE SECRET ♡
+   Romantic pink floral theme
+================================= */
+
+/* 1. Global Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Overall Page & Background */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 70px 16px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: #80132f;
+
+    background-image: url("./romantic-bg.png") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 3. Decorative Hearts and Daisies */
+body::before,
+body::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(19px, 4vw, 32px);
+    letter-spacing: 8px;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatFlowers 4s ease-in-out infinite;
+}
+
+body::before {
+    content: "❤️ 🌼 💜 ♡ 🌸";
+    top: 12px;
+}
+
+body::after {
+    content: "🌸 ♡ ❤️ 🌼 💜";
+    bottom: 12px;
+    animation-delay: -2s;
+}
+
+/* 4. Main Content Card */
+.pin-container {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 500px;
+    flex: 0 1 500px;
+    margin:0 auto;
+    padding: 30px 20px;
+    text-align: center;
+
+    background: rgba(255, 250, 252, 0.88);
+    border: 2px solid #d9ad65;
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(153, 31, 72, 0.16),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.65);
+
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Note: If you want to remove the yellow card background test, delete the rule below */
+/* 
+.pin-container {
+    background: yellow !important;
+} 
+*/
+
+/* 5. Small Introductory Text */
+.eyebrow {
+    color: #a3455b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1.8;
+}
+
+/* 6. Headings */
+h1 {
+    color: #8b1234;
+    font-size: clamp(28px, 7vw, 38px);
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 20px 0;
+}
+
+/* 7. Paragraphs */
+.message {
+    color: #804054;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 18px 0;
+}
+
+/* 8. PIN Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+/* 9. Form Labels */
+label {
+    font-size: 17px;
+    font-weight: bold;
+    color: #851530;
+}
+
+/* 10. PIN Input Field */
+input {
+    width: 100%;
+    padding: 16px;
+
+    border: 2px solid #e0b96f;
+    border-radius: 40px;
+
+    background: #fffafd;
+    color: #8b1234;
+
+    text-align: center;
+    font-family: inherit;
+    font-size: 22px;
+    letter-spacing: 8px;
+
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input:focus {
+    border-color: #bd5275;
+    box-shadow: 0 0 0 4px rgba(255, 155, 190, 0.25);
+}
+
+/* 11. Buttons */
+button {
+    padding: 16px 18px;
+
+    border: 2px solid #e2bc78;
+    border-radius: 40px;
+
+    background: linear-gradient(110deg, #a90035, #790020);
+    color: #fff4e9;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(125, 0, 37, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 18px rgba(125, 0, 37, 0.24);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* 12. Incorrect PIN Feedback */
+#feedback {
+    color: #b3214b;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 20px;
+}
+
+/* 13. Image Styling */
+#pic {
+    text-align: center;
+    width: 100%;
+}
+
+/* 14. Romantic Music Player */
+.music-player {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 25px auto;
+    accent-color: #d63384;
+}
+
+/* 15. Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatFlowers {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* 16. Smaller Screens Media Query */
+@media (max-width: 400px) {
+    .pin-container {
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    body::before,
+    body::after {
+        letter-spacing: 3px;
+    }
+}
+
+/* 17. Reduced-Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
