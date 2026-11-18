@@ -104,10 +104,12 @@ h1{
     color: #A51BC2;
     font-size: 16px;
     line-height: 1.8;
-    margin: 10px 0;
+    letter-spacing: 1px;
+    margin: 16px 0;
     font-family: 'Instrument serif', serif;
+    font-weight: bold;
     font-style: italic;
-    
+    text-align: left;
 }
 
 /* 8. PIN Form Layout */
@@ -192,15 +194,20 @@ button:active {
 }
 
 /* 13. Image Styling */
-#pic {
+h2 + .pic {
     text-align: center;
     width: 100%;
+}
+p + .pic{
+    text-align: center;
+    width: 50%;
 }
 
 /* 14. Romantic Music Player */
 .music-player {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 80%;
+    height: 30px;
     max-width: 350px;
     margin: 25px auto;
     accent-color: #100093;
