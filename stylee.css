@@ -86,7 +86,7 @@ body::after {
     font-weight: bold;
     letter-spacing: 3px;
     line-height: 1.8;
-    font-family: 'dancing script', cursive;
+    font-family: 'Dancing Script', cursive;
 }
 
 /* 6. Headings */
@@ -98,6 +98,8 @@ h1{
     margin: 20px 0;
     font-family: 'Playfair Display', cursive;
 }
+    
+}
 
 /* 7. Paragraphs */
 .message {
@@ -106,7 +108,7 @@ h1{
     line-height: 1.8;
     letter-spacing: 1px;
     margin: 16px 0;
-    font-family: 'Instrument serif', serif;
+    font-family: 'Instrument Serif', serif;
     font-weight: bold;
     font-style: italic;
     text-align: left;
@@ -195,11 +197,11 @@ button:active {
 
 /* 13. Image Styling */
 h2 + .pic {
-    text-align: center;
+    border-radius: 16px;
     width: 100%;
 }
 p + .pic{
-    text-align: center;
+    border-radius: 16px;
     width: 50%;
 }
 
